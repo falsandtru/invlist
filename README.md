@@ -14,7 +14,7 @@ https://github.com/falsandtru/spica
 
 ```ts
 export class List<T> {
-  readonly length: number {
+  readonly length: number;
   head: Node<T> | undefined;
   readonly tail: Node<T> | undefined;
   readonly last: Node<T> | undefined;
@@ -32,7 +32,7 @@ export interface Node<T> {
   value: T;
   next?: Node<T>;
   prev?: Node<T>;
-  readonly list: List<T> = next ? next.list : new List();
+  readonly list: List<T>;
   delete(): T;
   insertBefore(value: T): Node<T>;
   insertAfter(value: T): Node<T>;
